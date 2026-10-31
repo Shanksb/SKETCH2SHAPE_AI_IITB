@@ -32,6 +32,7 @@ def _orient(mesh: trimesh.Trimesh) -> trimesh.Trimesh:
     Verify on the chair; if it is still off, change the angle/axis here."""
     mesh.apply_transform(trimesh.transformations.rotation_matrix(-np.pi / 2, [1, 0, 0]))
     mesh.apply_transform(trimesh.transformations.rotation_matrix(np.pi / 2, [0, 1, 0]))
+     mesh.apply_transform(trimesh.transformations.rotation_matrix(np.pi / 2, [1, 0, 0]))
     return mesh
 
 
